@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- reset -->
+    <link rel="stylesheet" href="src/styles/reset.css">
+
+    <!-- Framework -->
+    <link rel="stylesheet" href="src/styles/buttons.css">
+    <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.rtl.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-reboot.rtl.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-reboot.rtl.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-utilities.rtl.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.rtl.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Yu-Gi-Yo</title>
+</head>
+
+<body>
+    <div class="bg-video">
+        <video class="video" autoplay loop muted>
+            <source src="src/assets/video/yugi.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <main class="main d-flex justify-content-between">
+        <section class="framed-golden-2 d-flex">
+            <div class="container d-flex justify-content-between">
+                <div class="computer d-flex flex-column align-items-center">
+                    <span class="placar">Computador</span>
+                    <span class="point-computer  framed-grey">2000 LP</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="camp d-flex flex-column justify-content-between debug">
+            <section class=" d-flex justify-content-between debug">
+                <div class="cemetery-computer debug">
+                    <img width="125px" height="180px">
+                </div>
+                <div class="central   debug">
+                    <div class="debug">
+                        <div class=" d-flex flex-column justify-content-between debug">
+                            <div class="d-flex justify-content-center">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="debug">
+                        <div class=" d-flex flex-column justify-content-between debug">
+                            <div class="d-flex justify-content-center">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                                <img class="card-camp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cemetery-player debug">
+                    <img width="125px" height="180px">
+                </div>
+            </section>
+            <section class="hand-player framed-golden-2 d-flex justify-content-center ">
+                <div class="hand-card d-flex justify-content-center ">
+                    <img class="card">
+                    <img class="card">
+                    <img class="card">
+                    <img class="card">
+                    <img class="card">
+                </div>
+                <div class="cheap">
+                    <img class="card cheap">
+                </div>
+            </section>
+        </section>
+
+        <section class="framed-golden-2 d-flex">
+            <!-- <div class="d-flex flex-column justify-content-center align-items-center button-golden">
+                    <div
+                        class="turn-flamed framed-golden  d-flex flex-column justify-content-center align-items-center">
+                        <span class="turn-type">Computador</span>
+                        <span class="clock">15s</span>
+                    </div>
+                </div> -->
+            <div class="player d-flex flex-column align-items-center">
+                <span class="placar">Player</span>
+                <span class="point-player framed-grey">2000 LP</span>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="src/scripts/engine.js" defer></script>
+
+    <!-- Bootstrap JS -->
+    <script src="src/scripts/bootstrap-js/bootstrap.bundle.js"></script>
+    <script src="src/scripts/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script src="src/scripts/bootstrap-js/bootstrap.esm.js"></script>
+    <script src="src/scripts/bootstrap-js/bootstrap.esm.min.js"></script>
+    <script src="src/scripts/bootstrap-js/bootstrap.js"></script>
+    <script src="src/scripts/bootstrap-js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+.bg-video {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-video .video {
+    height: 100vh;
+}
+
+.bg-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.8)50%,
+            rgba(0, 0, 0, 1)100%);
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.placar{
+    width: 10rem;
+    text-align: center;
+}
+
+.camp{
+   justify-content: space-between;
+}
+
+.cemetery-player{
+    display: flex;
+    align-items: flex-end;
+}
+
+.central{
+
+}
+
+.card{
+    width: 105px;
+    height: 160px;
+    margin: 0 10px;
+}
+
+.card-camp{
+    width: 85px;
+    height: 120px;
+    margin: 0 10px;
+}
+
+.cheap{
+    /* margin-left: 200px; */
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+.turn-flamed{
+    font-size: 1.0rem;
+}
+
+.point-computer,.point-player,.turn-type,.clock{
+    color:#fff;
+}
+
+@media (max-width: 1500px) {
+    .turn-flamed,.point-computer,.point-player, .placar{
+        font-size: 0.7rem;
+    }
+
+    .card{
+        width: 85px;
+        height: 140px;
+        margin: 0 10px;
+    }
+}
