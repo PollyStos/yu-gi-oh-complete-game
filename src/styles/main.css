@@ -1,89 +1,127 @@
-.bg-video {
-    position: absolute;
-    z-index: -2;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-.bg-video .video {
-    height: 100vh;
-}
-
-.bg-video::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 0.8)50%,
-            rgba(0, 0, 0, 1)100%);
+body {
+    background-image: radial-gradient(#242424 20%, #000);
+    z-index: -4;
 }
 
 .main {
     width: 100vw;
     height: 100vh;
+    background-image: linear-gradient(90deg, #343435, #545455 50%, #343435);
 }
 
-.placar{
+.box-placar,
+.box-placar-2 {
+    display: flex;
+    height: 150px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #c1c1c1;
+    box-shadow: 0 4px 58px #000000c4;
+    z-index: 4;
+}
+
+.box-placar {
+    border-radius: 0 10% 0 10%;
+}
+
+.box-placar-2 {
+    border-radius: 10% 0 10% 0;
+}
+
+.placar {
     width: 10rem;
     text-align: center;
 }
 
-.camp{
-   justify-content: space-between;
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100%;
+    color: #fff;
 }
 
-.cemetery-player{
+.middle {
+    box-shadow: 0 14px 40px #131313d8;
+}
+
+.camp {
+    height: 100%;
+    background-color: #653d3d;
+    border-radius: 10px;
+}
+
+.cemetery {
+    margin: 10px 20px;
+}
+
+.cemetery-player {
     display: flex;
     align-items: flex-end;
 }
 
-.central{
-
+.battle {
+    margin: 10px;
+    border: 5px solid rgb(163, 130, 130);
+    background-image: linear-gradient(180deg, #795639, #856e6e, #795639);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.603);
+    border-radius: 15px;
 }
 
-.card{
+.hand-player {
+    padding: 10px;
+    background-color: #c1c1c1;
+    border: 10px ridge #9b97ab;
+    border-radius: 5px;
+}
+
+.card {
     width: 105px;
     height: 160px;
     margin: 0 10px;
 }
 
-.card-camp{
+.card-camp {
     width: 85px;
     height: 120px;
-    margin: 0 10px;
-}
-
-.cheap{
-    /* margin-left: 200px; */
+    margin: 10px;
 }
 
 .debug {
     border: 1px solid red;
 }
 
-.turn-flamed{
+.turn-flamed {
+    margin-top: 100%;
+    padding: 20px;
     font-size: 1.0rem;
 }
 
-.point-computer,.point-player,.turn-type,.clock{
-    color:#fff;
+.point-computer,
+.point-player,
+.turn-type,
+.clock {
+    color: #fff;
 }
 
 @media (max-width: 1500px) {
-    .turn-flamed,.point-computer,.point-player, .placar{
+
+    .turn-flamed,
+    .point-computer,
+    .point-player,
+    .placar {
         font-size: 0.7rem;
     }
 
-    .card{
+    .card {
         width: 85px;
         height: 140px;
         margin: 0 10px;
+    }
+
+    .card-camp {
+        width: 85px;
+        height: 100px;
+        margin: 3px;
     }
 }
