@@ -42,12 +42,16 @@
 
 <body>
     <main class="container main d-flex justify-content-between ">
-        <section class="box-placar">
-            <div class="container d-flex justify-content-between">
+        <section class="d-flex flex-column justify-content-between ">
+            <div class="box-placar container d-flex justify-content-between">
                 <div class="computer d-flex flex-column align-items-center">
                     <span class="placar">Computador</span>
-                    <span class="point-computer  framed-grey">2000 LP</span>
+                    <span id="point-computer" class="framed-grey">2000 LP</span>
                 </div>
+            </div>
+
+            <div class="menu" >
+                <img width="125px" height="180px">
             </div>
         </section>
 
@@ -112,11 +116,11 @@
             </section>
         </section>
 
-        <section>
+        <section class="d-flex flex-column justify-content-between " >
             <div class="box-placar-2">
                 <div class="player d-flex flex-column align-items-center">
                     <span class="placar">Player</span>
-                    <span class="point-player framed-grey">2000 LP</span>
+                    <span id="point-player" class="framed-grey">2000 LP</span>
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center ">
@@ -127,12 +131,11 @@
             </div>
             <div class="menu ">
                 <h1>Menu</h1>
-                <p>Pausar</p>
             </div>
         </section>
     </main>
 
-    <script src="src/scripts/engine.js" defer></script>
+    <!-- <script src="src/scripts/engine.js" defer></script> -->
 
     <!-- Bootstrap JS -->
     <script src="src/scripts/bootstrap-js/bootstrap.bundle.js"></script>

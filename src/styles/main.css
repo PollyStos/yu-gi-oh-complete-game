@@ -1,5 +1,6 @@
 body {
     background-image: radial-gradient(#242424 20%, #000);
+    background-repeat: no-repeat;
     z-index: -4;
 }
 
@@ -29,7 +30,7 @@ body {
 }
 
 .placar {
-    width: 10rem;
+    width: 12rem;
     text-align: center;
 }
 
@@ -37,8 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100%;
-    color: #fff;
+    padding: 40px 0;
 }
 
 .middle {
@@ -92,19 +92,19 @@ body {
 }
 
 .turn-flamed {
-    margin-top: 100%;
     padding: 20px;
     font-size: 1.0rem;
 }
 
-.point-computer,
-.point-player,
+#point-computer,
+#point-player,
 .turn-type,
-.clock {
+.clock,
+.menu {
     color: #fff;
 }
 
-@media (max-width: 1500px) {
+@media (max-height: 1500px) {
 
     .turn-flamed,
     .point-computer,
