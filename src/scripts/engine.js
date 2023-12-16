@@ -16,8 +16,26 @@ const state = {
     button: document.getElementById("next-duel"),
 };
 
-function init() {
-    console.log(state);
+function contadorDecrescente(valor, callback) {
+    if (valor > 0) {
+        console.log(valor);
+        valor--;
+        setTimeout(function () {
+            contadorDecrescente(valor, callback);
+        }, 1000); // Intervalo de 1 segundo (1000 milissegundos)
+    } else {
+        callback();
+
+        valor = 15;
+
+        contadorDecrescente(valor, callback);
+    }
 }
 
-init();
+
+
+function init() {
+    contadorDecrescente(15, function () {
+        console.log("Contador chegou a zero. Disparar nova função aqui.");
+    });
+}

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="src/styles/main.css">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.css">
+    <!-- <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.css">
     <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.rtl.css">
     <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap-grid.rtl.min.css">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.css">
     <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.min.css">
     <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.rtl.css">
-    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-css/bootstrap.rtl.min.css"> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,97 +41,88 @@
 </head>
 
 <body>
-    <main class="container main d-flex justify-content-between ">
-        <section class="d-flex flex-column justify-content-between ">
-            <div class="box-placar container d-flex justify-content-between">
-                <div class="computer d-flex flex-column align-items-center">
+
+    <main class="main">
+        <section class="hud">
+            <div class="box-placar">
+                <div class="computer blue-shadow">
                     <span class="placar">Computador</span>
-                    <span id="point-computer" class="framed-grey">2000 LP</span>
+                    <span id="point-computer" class="">2000 LP</span>
                 </div>
-            </div>
-
-            <div class="menu" >
-                <img width="125px" height="180px">
-            </div>
-        </section>
-
-        <section class="middle d-flex flex-column justify-content-between ">
-            <section class="camp d-flex justify-content-between ">
-                <div class="cemetery cemetery-computer ">
-                    <img width="125px" height="180px">
-                </div>
-                <div class="d-flex flex-column justify-content-between battle">
-                    <div class="">
-                        <div class=" d-flex flex-column justify-content-between ">
-                            <div class="d-flex justify-content-center">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class=" d-flex flex-column justify-content-between ">
-                            <div class="d-flex justify-content-center">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                                <img class="card-camp">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cemetery cemetery-player ">
-                    <img width="125px" height="180px">
-                </div>
-            </section>
-            <section class="hand-player d-flex justify-content-center ">
-                <div class="hand-card d-flex justify-content-center ">
-                    <img class="card">
-                    <img class="card">
-                    <img class="card">
-                    <img class="card">
-                    <img class="card">
-                </div>
-                <div class="cheap">
-                    <img class="card cheap">
-                </div>
-            </section>
-        </section>
-
-        <section class="d-flex flex-column justify-content-between " >
-            <div class="box-placar-2">
-                <div class="player d-flex flex-column align-items-center">
-                    <span class="placar">Player</span>
-                    <span id="point-player" class="framed-grey">2000 LP</span>
-                </div>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center ">
-                <div class=" turn-flamed d-flex flex-column justify-content-center align-items-center">
-                    <span class="turn-type">Computador</span>
+                <div class="box-turn">
+                    <span class="turn">Computador</span>
                     <span class="clock">15s</span>
                 </div>
+                <div class="player blue-shadow">
+                    <span class="placar">Player</span>
+                    <span id="point-player" class="">2000 LP</span>
+                </div>
             </div>
-            <div class="menu ">
-                <h1>Menu</h1>
+        </section>
+
+        <section class="middle">
+            <div class=" battle blue-shadow">
+                <div class="camp-computer">
+                    <div class="camp">
+                        <div class="magic">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                        </div>
+                        <div class="monster">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cemetery cemetery-player ">
+                        <img class="card" src="src/assets/icons/card-back.png" alt="">
+                    </div>
+                </div>
+                <div class="camp-player">
+                    <div class="camp">
+                        <div class="monster">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                        </div>
+                        <div class="magic">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                            <img class="card" src="src/assets/icons/card-back.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cemetery cemetery-player ">
+                        <img class="card" src="src/assets/icons/card-back.png" alt="">
+                    </div>
+                </div>
             </div>
+        </section>
+        <section class="hand-player blue-shadow">
+            <div class="hand-card">
+                <img class="card" src="src/assets/icons/card-back.png" alt="">
+                <img class="card" src="src/assets/icons/card-back.png" alt="">
+                <img class="card" src="src/assets/icons/card-back.png" alt="">
+                <img class="card" src="src/assets/icons/card-back.png" alt="">
+                <img class="card" src="src/assets/icons/card-back.png" alt="">
+            </div>
+            <div class="cheap">
+                <img class="card cheap" src="src/assets/icons/card-back.png" alt="">
+            </div>
+        </section>
+        </section>
+        <section class="nav ">
+            <nav>
+                <button class="blue-shadow" >Menu</button>
+            </nav>
         </section>
     </main>
 
