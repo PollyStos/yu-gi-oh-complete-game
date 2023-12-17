@@ -37,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--color-principal);
+    z-index: 1;
 }
 
 .computer{
@@ -76,8 +77,6 @@ body {
 .middle {
     height: 65vh;
     position: relative;
-    z-index: 1;
-    box-shadow: 0 14px 40px #131313d8;
     z-index: -1;
 }
 
@@ -115,14 +114,11 @@ body {
 }
 
 .hand-card{
-    width: 66vw;
-    display: flex;
-    justify-content: space-between;
+    width: 74vw;
 }
 
 .card {
-    width: 45px;
-    height: 64,64;
+    width: 40px;
     margin: 0 2px;
 }
 
@@ -143,6 +139,128 @@ button{
     border-radius: 5px;
 }
 
-.debug {
-    border: 1px solid red;
+ @media(min-width:650px){
+    .main{
+        margin: auto;
+        max-width: 180px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .group,.middle,.hand-player{
+        max-width: 737px;
+    }
+
+    .computer,.player{
+        width: 9.9rem;
+    }
+
+    .group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+
+    .middle{
+        width: 65vw;
+        height: 65vh;
+    }
+
+    .battle{
+        height: 68vh;
+    }
+
+    .box-placar{
+        width: 14vw;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .placar,#point-computer,#point-player{
+        font-size: 9px;
+    }
+
+    .turn,.clock{
+        font-size: 10px;
+    }
+
+    .card {
+        width: 50px;
+    }
+
+    .hand-player{
+        width: 65vw;
+    }
+
+    .hand-card{
+        width: 50vw;
+    }
+
+
+    .nav{
+        padding: 21px 5px;
+    }
+
+    nav{
+        writing-mode: vertical-lr;
+    }
+
+    button{
+        white-space: nowrap;
+        transform: rotate(-90deg);
+        font-size: 20px;
+    }
+} 
+
+
+@media(min-width:950px){
+    .battle{
+        height: 68vh;
+    }
+
+    .computer,.player{
+        width: 15rem;
+    }
+
+    .placar,#point-computer,#point-player{
+        font-size: 10px;
+        line-height: 2rem;
+    }
+
+    .turn,.clock{
+        font-size: 12px;
+        line-height: 2rem;
+    }
+
+    .card {
+        width: 54px;
+    }
+
+    button{
+        font-size: 20px;
+    }
+}
+
+ @media(min-width:1280px){
+    .card{
+        width: 70px;
+    }
+} 
+ @media(min-width:1600px){
+    .card{
+        width: 90px;
+    }
+
+    .turn,.clock{
+        font-size: 18px;
+        line-height: 3rem;
+    }
+} 
+
+@media(min-width:1920px){
+    .card{
+        width: 100px;
+    }
 }
