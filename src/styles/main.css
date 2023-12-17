@@ -111,10 +111,11 @@ body {
     background-color: var(--color-principal);
     border-radius: 5px;
     display: flex;
+    justify-content: center;
 }
 
 .hand-card{
-    width: 74vw;
+    width: 66vw;
     display: flex;
     justify-content: space-between;
 }
