@@ -41,8 +41,16 @@
 </head>
 
 <body>
-
     <main class="main">
+        <div class="blur">
+            <nav class="menu" >
+                <h1 class="menu-list" >Menu</h1>
+                <div class="text-menu nav" >
+                    <button class="menu-list black" onclick='init()' >Novo Jogo</button>
+                    <button class="menu-list grey" >Play</button>
+                </div>
+            </nav>
+        </div>
         <section class="hud">
             <div class="box-placar">
                 <div class="computer blue-shadow">
@@ -50,7 +58,7 @@
                     <span id="point-computer" class="">2000 LP</span>
                 </div>
                 <div class="box-turn">
-                    <span class="turn">Computador</span>
+                    <span id="turn">Computador</span>
                     <span class="clock">15s</span>
                 </div>
                 <div class="player blue-shadow">
@@ -61,6 +69,18 @@
         </section>
 
         <div class="group" >
+            <section class="hand-computer blue-shadow">
+                <div class="hand-card">
+                    <img class="card" src="src/assets/icons/card-back.png" alt="">
+                    <img class="card" src="src/assets/icons/card-back.png" alt="">
+                    <img class="card" src="src/assets/icons/card-back.png" alt="">
+                    <img class="card" src="src/assets/icons/card-back.png" alt="">
+                    <img class="card" src="src/assets/icons/card-back.png" alt="">
+                </div>
+                <div class="">
+                    <img class="card cheap" src="src/assets/icons/card-back.png" alt="">
+                </div>
+            </section>
             <section class="middle">
                 <div class=" battle blue-shadow">
                     <div class="camp-computer">
@@ -120,22 +140,22 @@
                 </div>
             </section>
         </div>
-        <section class="nav ">
-            <nav>
-                <button class="blue-shadow">Menu</button>
-            </nav>
+        <section class="button-menu">
+                <div class="button">
+                    <button class="blue-shadow" onclick="openMenu()" >Pause</button>
+                </div>
         </section>
     </main>
 
-    <!-- <script src="src/scripts/engine.js" defer></script> -->
+    <script src="src/scripts/engine.js" defer></script>
 
     <!-- Bootstrap JS -->
-    <script src="src/scripts/bootstrap-js/bootstrap.bundle.js"></script>
+    <!-- <script src="src/scripts/bootstrap-js/bootstrap.bundle.js"></script>
     <script src="src/scripts/bootstrap-js/bootstrap.bundle.min.js"></script>
     <script src="src/scripts/bootstrap-js/bootstrap.esm.js"></script>
     <script src="src/scripts/bootstrap-js/bootstrap.esm.min.js"></script>
     <script src="src/scripts/bootstrap-js/bootstrap.js"></script>
-    <script src="src/scripts/bootstrap-js/bootstrap.min.js"></script>
+    <script src="src/scripts/bootstrap-js/bootstrap.min.js"></script> -->
 </body>
 
 </html>

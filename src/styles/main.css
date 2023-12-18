@@ -4,11 +4,13 @@
     --color-principal:#9c1515;
     --color-secundario:#3044f5;
     --color-shadow:#050505;
+    --color-grey:#bbbbbb;
 }
 
 body {
     background-image: radial-gradient(var(--color-secundario) 0%, #000000);
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .blue-shadow{
@@ -17,6 +19,65 @@ body {
 
 .main {
     height: 100vh;
+    position: relative;
+}
+
+.blur{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    z-index: 9;
+}
+
+.menu{
+    background: var(--color-grey);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    border: 6px double #000;
+}
+
+.menu h1{
+    font-size: 50px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.nav button{
+    padding: 15px;
+    font-size: 20px;
+    background-color: var(--color-grey);
+    margin: 10px;
+}
+
+.nav .black{
+    color:#000;
+    border: 1px solid #000;
+}
+
+.nav .grey{
+    color: #a0a0a0;
+    border: 1px solid #a0a0a0;
+}
+
+.nav button:hover{
+    background-color: #303135;
+    color: var(--color-white);
 }
 
 .hud{
@@ -60,7 +121,7 @@ body {
     text-shadow: 1px 1px #000;
 }
 
-.turn,.clock{
+#turn,.clock{
     color: var(--color-white);
     line-height: 2rem;
     text-shadow: 2px 2px #000;
@@ -105,7 +166,7 @@ body {
     margin: 0 0 0 15px;
 }
 
-.hand-player {
+.hand-player,.hand-computer {
     padding: 10px;
     background-color: var(--color-principal);
     border-radius: 5px;
@@ -126,17 +187,22 @@ body {
     margin: 0 0 0 15px;
 }
 
-.nav{
+.button-menu{
     padding: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-button{
+.button button{
     padding: 1rem;
     font-size: 10px;
     border-radius: 5px;
+}
+
+.button button:hover{
+    background-color: #303135;
+    color: var(--color-white);
 }
 
  @media(min-width:650px){
@@ -147,7 +213,7 @@ button{
         justify-content: space-around;
     }
 
-    .group,.middle,.hand-player{
+    .group,.middle,.hand-player,.hand-computer{
         max-width: 737px;
     }
 
@@ -164,11 +230,11 @@ button{
 
     .middle{
         width: 65vw;
-        height: 65vh;
+        height: 63vh;
     }
 
     .battle{
-        height: 68vh;
+        height: 62vh;
     }
 
     .box-placar{
@@ -182,15 +248,15 @@ button{
         font-size: 9px;
     }
 
-    .turn,.clock{
+    #turn,.clock{
         font-size: 10px;
     }
 
     .card {
-        width: 50px;
+        width: 45px;
     }
 
-    .hand-player{
+    .hand-player,.hand-computer{
         width: 65vw;
     }
 
@@ -199,15 +265,15 @@ button{
     }
 
 
-    .nav{
+    .button-menu{
         padding: 21px 5px;
     }
 
-    nav{
+    .button{
         writing-mode: vertical-lr;
     }
 
-    button{
+    .button button{
         white-space: nowrap;
         transform: rotate(-90deg);
         font-size: 20px;
@@ -217,7 +283,7 @@ button{
 
 @media(min-width:950px){
     .battle{
-        height: 68vh;
+        height: 61vh;
     }
 
     .computer,.player{
@@ -229,31 +295,31 @@ button{
         line-height: 2rem;
     }
 
-    .turn,.clock{
+    #turn,.clock{
         font-size: 12px;
         line-height: 2rem;
     }
 
     .card {
-        width: 54px;
+        width: 50px;
     }
 
-    button{
+    .button button{
         font-size: 20px;
     }
 }
 
  @media(min-width:1280px){
     .card{
-        width: 70px;
+        width: 62px;
     }
 } 
  @media(min-width:1600px){
     .card{
-        width: 90px;
+        width: 88px;
     }
 
-    .turn,.clock{
+    #turn,.clock{
         font-size: 18px;
         line-height: 3rem;
     }
