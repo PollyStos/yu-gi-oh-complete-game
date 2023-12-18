@@ -28,10 +28,8 @@ function changeTurn() {
     console.log("me chamou")
     if (state.views.turn.textContent == "Computer") {
         state.views.turn.textContent = "Player";
-        console.log("troquei para player");
     } else {
         state.views.turn.textContent = "Computer";
-        console.log("troquei para computer");
     }
     state.values.time = 16;
 }
@@ -80,26 +78,30 @@ function choicePlayer() {
 function imparPar() {
     const btnElement = document.createElement("button");
     const nome= ["Par","Impar"];
+    let win;
     for (i = 0; i < nome.length; i++) {
         btnElement.textContent = nome[i];
         btnElement.classList.add("menu-list");
         btnElement.classList.add("black");
+        btnElement.setAttribute("onclick", "choise('"+nome[i]+"')");
         state.views.nav.appendChild(btnElement.cloneNode(true));
     }
-    // const numberComputer = randonComputer();
-    // console.log(numberComputer);
-    // const numberPlayer = choicePlayer();
+}
 
-    // const result = (numberComputer + numberPlayer) % 2;
+function choise(choise){
+    
+}
 
-    return win ="par";
+function handleClick(choice) {
+    // Aqui você pode fazer o que quiser com a escolha (Par ou Ímpar)
+    console.log("Escolha:", choice);
 }
 
 function init() {
     for (let i = 0; i < state.views.menuList.length; i++) {
         state.views.menuList[i].style.display = "none";
     }
-    const win = imparPar();
+    imparPar();
     // closedMenu(win);
     state.actions.countDownTimeId = setInterval(this.countDown.bind(this), 1000);
 
