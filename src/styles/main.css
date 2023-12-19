@@ -80,6 +80,10 @@ body {
     color: var(--color-white);
 }
 
+.mao{
+    width: 8rem;
+}
+
 .hud{
     margin: 10px;
     display: flex;

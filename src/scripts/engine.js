@@ -62,13 +62,17 @@ function randonComputer() {
     return (randomNumber);
 }
 function choicePlayer() {
-    const imgElement = document.createElement("img");
-    const path = "src/assets/img/"
+    displayNoneMenuList ();
+    const path = "src/assets/img/";
+    
+    
     for (i = 5; i > 0; i--) {
+        const imgElement = document.createElement("img");
+        imgElement.id = i;
+        imgElement.classList.add ("mao");
         imgElement.src = path + i + ".png";
         imgElement.alt = "";
         state.views.menu.appendChild(imgElement);
-        console.log(imgElement.src);
     }
 
     let result = 1;
@@ -78,7 +82,7 @@ function choicePlayer() {
 function imparPar() {
     const btnElement = document.createElement("button");
     const nome= ["Par","Impar"];
-    let win;
+
     for (i = 0; i < nome.length; i++) {
         btnElement.textContent = nome[i];
         btnElement.classList.add("menu-list");
@@ -89,20 +93,20 @@ function imparPar() {
 }
 
 function choise(choise){
-    
+    const opcaoComputer = randonComputer();
+    const opcaoPlayer = choicePlayer();
+
+    const win = (opcaoComputer+opcaoPlayer)%2;
+    state.actions.countDownTimeId = setInterval(this.countDown.bind(this), 1000);
 }
 
-function handleClick(choice) {
-    // Aqui você pode fazer o que quiser com a escolha (Par ou Ímpar)
-    console.log("Escolha:", choice);
-}
-
-function init() {
+function displayNoneMenuList (){
     for (let i = 0; i < state.views.menuList.length; i++) {
         state.views.menuList[i].style.display = "none";
     }
-    imparPar();
-    // closedMenu(win);
-    state.actions.countDownTimeId = setInterval(this.countDown.bind(this), 1000);
+}
 
+function init() {
+    displayNoneMenuList ();
+    imparPar();
 }
