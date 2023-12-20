@@ -17,8 +17,8 @@ const state = {
         imgMComputer: document.createElement("img"),
         numComputer: 0,
         numPlayer: 0,
-        playerChoise:"",
-        win:"",
+        playerChoise: "",
+        win: "",
         computerScore: 0,
         playerScore: 0,
         time: 15,
@@ -72,21 +72,40 @@ function openMenu() {
     }
 }
 
+function textWin(phase) {
+    const btnImg = document.querySelectorAll(".btn-img");
+
+    for (let i = 0; i < btnImg.length; i++) {
+        btnImg[i].style.display = "none";
+    }
+
+    const tWin = document.createElement("p");
+    tWin.classList.add("p-win");
+    tWin.textContent = phase;
+
+    state.views.nav.appendChild(tWin);
+
+    setTimeout(function() {
+        closedMenu();
+    }, 1000);
+}
+
 function win() {
-    let res="";
+    let res = "";
     if ((state.values.numComputer + state.values.numPlayer) % 2 === 0) {
         res = "Par";
-    }else{
+    } else {
         res = "Impar";
     }
 
-    if(res===state.values.playerChoise){
+    if (res === state.values.playerChoise) {
         state.values.win = "Player Win";
-    }else{
+    } else {
         state.values.win = "Computer Win";
     }
-
-    console.log(state.values.win);
+    setTimeout(function() {
+        textWin(state.values.win);
+    }, 1000);
 
     state.actions.countDownTimeId = setInterval(this.countDown.bind(this), 1000);
 }

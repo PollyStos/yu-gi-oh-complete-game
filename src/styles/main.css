@@ -80,6 +80,11 @@ body {
     color: var(--color-white);
 }
 
+.p-win{
+    padding-top: 10rem ;
+    font-size: 3rem;
+}
+
 .hud{
     margin: 10px;
     display: flex;
