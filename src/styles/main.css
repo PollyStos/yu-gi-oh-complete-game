@@ -80,13 +80,28 @@ body {
     color: var(--color-white);
 }
 
+.hud{
+    margin: 10px;
+    display: flex;
+}
+
 .mao{
     width: 8rem;
 }
 
-.hud{
-    margin: 10px;
-    display: flex;
+.zoomed img {
+    transform: scale(1.5); 
+}
+.zoomed2 img {
+    transform: scale(1.5) rotate(180deg);
+}
+
+.btn-img{
+    background: none;
+}
+
+.btn-img img {
+    transition: transform 0.3s ease; /* ou a duração/desaceleração desejada */
 }
 
 .box-placar{
